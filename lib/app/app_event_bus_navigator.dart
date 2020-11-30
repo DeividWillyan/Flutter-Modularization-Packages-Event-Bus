@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class AppEventBusNavigator {
   AppEventBusNavigator() {
+    print('--- CREATING EVENT BUS NAVIGATOR');
     CustomEventBus.bus.on<Events>().listen((Events event) {
       switch (event) {
         case Events.AUTHENTICATION_SUCCESS:
